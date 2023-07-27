@@ -19,10 +19,14 @@ export const putDb = async (content) => {
   const transaction = db.transaction('jate', 'readwrite');
   const objectStore = transaction.objectStore('jate');
 
-  // Use the put method to add or update the content in the database
-  await objectStore.put({ content });
+  try {
+    // Use the put method to add or update the content in the database
+    await objectStore.put({ content });
 
-  console.log('Content saved to IndexedDB');
+    console.log('Content saved to IndexedDB');
+  } catch (error) {
+    console.error('Error saving content to IndexedDB:', error);
+  }
 };
 
 // TODO: Add logic for a method that gets all the content from the database
@@ -32,10 +36,15 @@ export const getDb = async () => {
   const transaction = db.transaction('jate', 'readonly');
   const objectStore = transaction.objectStore('jate');
 
-  // Use the get method to retrieve the content from the database
-  const data = await objectStore.get(1); // Assuming you only have one entry with the key 'id' set to 1
+  try {
+    // Use the get method to retrieve the content from the database
+    const data = await objectStore.get(1); // Assuming you only have one entry with the key 'id' set to 1
 
-  return data?.content || null; // Return the content or null if not found
+    return data?.content || null; // Return the content or null if not found
+  } catch (error) {
+    console.error('Error retrieving content from IndexedDB:', error);
+    return null;
+  }
 };
 
 initdb();
