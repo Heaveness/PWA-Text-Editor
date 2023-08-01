@@ -12,31 +12,32 @@ module.exports = () => {
     },
     output: {
       filename: '[name].bundle.js',
-      path: path.resolve(__dirname, 'dist'),
+      path: path.resolve(__dirname, 'client', 'dist'),
     },
     plugins: [
       new HtmlWebpackPlugin({
-        template: './index.html',
-        chunks: ['main'],
-        filename: 'index.html',
+        template: './index.html', 
+        title: 'Just Another Text Editor'
       }),
       new WebpackPwaManifest({
-        filename: 'manifest.json',
+        fingerprints: false,
+        inject: true,
         name: 'Just Another Text Editor',
         short_name: 'J.A.T.E',
         description: 'A simple text editor that works offline!',
         background_color: '#ffffff',
-        theme_color: '#ffffff',
-        crossorigin: 'use-credentials', // can be null, use-credentials or anonymous
+        theme_color: '#202A44',
         icons: [
           {
-            src: path.resolve('src/images/logo.png'),
-            sizes: [96, 128, 192, 256, 384, 512], // multiple sizes
+            src: path.resolve(__dirname, 'src/images/logo.png'),
+            sizes: [96, 128, 192, 256, 384, 512],
+            destination: path.join('assets', 'icons'),
           },
         ],
       }),
       new InjectManifest({
         swSrc: './src-sw.js',
+        swDest: 'src-sw.js',
       }),
     ],
 

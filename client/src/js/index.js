@@ -17,11 +17,11 @@ const loadSpinner = () => {
   main.appendChild(spinner);
 };
 
+const editor = new Editor();
+
 if (typeof editor === 'undefined') {
   loadSpinner();
 }
-
-const editor = new Editor();
 
 // Check if service workers are supported
 if ('serviceWorker' in navigator) {
