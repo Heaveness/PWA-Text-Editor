@@ -43,6 +43,7 @@ To test the PWA Text Editor locally, follow the installation instructions above.
 
 ## Links
 **Github Repo:** [Link to Github repository!](https://github.com/Heaveness/PWA-Text-Editor) <br>
+**Heroku Deployed App:** [Link to Heroku App!](https://pwa-text-editor-heaveness-b26be0085d4a.herokuapp.com/) <br>
 
 ## Credits
 **Websites:** W3schools, stackoverflow, & reddit <br>
