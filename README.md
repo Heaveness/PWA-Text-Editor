@@ -16,6 +16,7 @@ Come give this simple application a try now! <br>
 - [License](#license)
 - [Contributing](#contribution)
 - [Tests](#tests)
+- [Previews](#previews)
 - [Links](#links)
 - [Credits](#credits)
 - [Questions](#questions)
@@ -40,6 +41,10 @@ Contributions to this project are welcome. Please follow standard contribution g
 
 ## Tests
 To test the PWA Text Editor locally, follow the installation instructions above. Use the editor to create and save content, both online and offline. Verify that the content is stored in the IndexedDB database and retrieved correctly when reopening the application.
+
+## Previews
+
+![PWA Demo Image](19-pwa-homework-demo-01.gif)
 
 ## Links
 **Github Repo:** [Link to Github repository!](https://github.com/Heaveness/PWA-Text-Editor) <br>

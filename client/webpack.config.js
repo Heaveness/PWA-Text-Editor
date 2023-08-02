@@ -39,6 +39,8 @@ module.exports = () => {
         description: 'A simple text editor that works offline!', 
         background_color: '#ffffff', 
         theme_color: '#202A44',
+        start_url: '/',
+        publicPath: '/',
         icons: [
           {
             // Array of icons for the web app.
